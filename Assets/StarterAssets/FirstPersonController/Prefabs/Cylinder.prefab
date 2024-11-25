@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 1368672790365827549}
   - component: {fileID: -1040149596530456355}
   - component: {fileID: 8421237968996387602}
+  - component: {fileID: 3695275493898111967}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: enemy
@@ -445,6 +446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 0
   deadbodyPrefab: {fileID: 0}
+  vidaenemigoUI: {fileID: 0}
+  gamecontroler: {fileID: 0}
 --- !u!114 &8421237968996387602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,3 +463,21 @@ MonoBehaviour:
   vida: 100
   deadbodyPrefab: {fileID: 4038080564942230792, guid: 33785f7653f35c64fad7b2a5a38b4b97,
     type: 3}
+  vidaenemigoUI: {fileID: 0}
+  gamecontroler: {fileID: 0}
+--- !u!111 &3695275493898111967
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5611569582451281502}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c309f2bcefbe7724b8da0a08cbcadad4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c309f2bcefbe7724b8da0a08cbcadad4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
