@@ -7,8 +7,9 @@ public class objectspawner : MonoBehaviour
     public GameObject objectprefab;
     public float bulletForce;
     public Vector3 spawnPosition;
-   
-        // Start is called before the first frame update
+    [SerializeField] private AudioClip sonidoDisparo;
+
+    // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -24,6 +25,11 @@ public class objectspawner : MonoBehaviour
             Rigidbody bulletRigidbody = bulletclone.GetComponent<Rigidbody>();
             bulletRigidbody.velocity = transform.forward * bulletForce;
             Destroy(bulletclone, 3f);
+            if (controladorsonidos.instance != null && sonidoDisparo != null)
+            {
+                controladorsonidos.instance.ejecutarsonido(sonidoDisparo);
+            }
         }
+        
     }
 }

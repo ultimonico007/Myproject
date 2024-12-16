@@ -56,7 +56,8 @@ namespace StarterAssets
 
 		// player
 		private float _speed;
-		private float _rotationVelocity;
+		[SerializeField] private AudioClip sonidoSalto;
+        private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
 
@@ -204,9 +205,13 @@ namespace StarterAssets
 			{
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
+                if (controladorsonidos.instance != null && sonidoSalto != null)
+                {
+                    controladorsonidos.instance.ejecutarsonido(sonidoSalto);
+                }
 
-				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
+                // stop our velocity dropping infinitely when grounded
+                if (_verticalVelocity < 0.0f)
 				{
 					_verticalVelocity = -2f;
 				}

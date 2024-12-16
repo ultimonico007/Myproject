@@ -11,7 +11,7 @@ public class controler : MonoBehaviour
     public int kills;
     public int totalenemies;
     private bool isPaused = false;
-    private float defeatTimer = 60f;
+    public float defeatTimer = 60f;
     public TMPro.TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI killstext;
     [SerializeField] private TextMeshProUGUI wintext;
